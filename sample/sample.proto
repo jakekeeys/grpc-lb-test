@@ -1,0 +1,18 @@
+syntax = "proto3";
+package sample;
+
+import "google/api/annotations.proto";
+
+service SampleService {
+    rpc SampleRPC(SampleRequest) returns (SampleResponse) {
+        option (google.api.http) = {
+            get: "/samplerpc"
+        };
+    }
+}
+
+message SampleRequest {
+}
+
+message SampleResponse {
+}
